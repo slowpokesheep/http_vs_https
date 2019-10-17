@@ -10,8 +10,8 @@ npm start
 ## Description
 `npm start` starts two servers, one http and another https
 
-* HTTP server `127.0.0.1:8080`
-* HTTPS server `127.0.0.1:8443`
+* HTTP server `http://127.0.0.1:8080`
+* HTTPS server `https://127.0.0.1:8443`
 
 ## Traffic
 
