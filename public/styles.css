@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  margin-right: 30px;
+  margin-left: 30px;
+
+  font-family: "Open Sans", sans-serif; 
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media (min-width: 1400px) {
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+header, main {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+button {
+  display: inline-block;
+
+  width: 100%;
+  max-width: 250px;
+  padding: 10px 15px;
+  margin: 0;
+
+  color: #eee;
+  text-align: center;
+
+  cursor: pointer;
+
+  background-color: #222;
+
+  border: 1px solid #222;
+  border-radius: 4px;
+
+  transition:
+    color 250ms ease-in-out,
+    background-color 250ms ease-in-out,
+    border-color 250ms ease-in-out;
+}
+
+button:hover {
+    color: #222;
+    background-color: #eee;
+}
+
+.login__form {
+  margin: 30px 0 30px 0;
+}
+
+.login__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.login__field label {
+  @media (min-width: 600px) {
+    flex: 0 0 150px;
+  }
+}
+  
+.login__field input {
+  flex: 1;
+
+  @media (min-width: 600px) {
+    flex: 0 0 300px;
+  }
+}
+.login__field--invalid input {
+  border-color: #855;
+  background-color: #fbb;
+}
