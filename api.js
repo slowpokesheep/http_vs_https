@@ -3,11 +3,6 @@ const path = require('path');
 
 const router = express.Router();
 
-/**
- * Catches errors from routes and passes them on to app.js
- *
- * @param {function} fn - Middleware to encapsulate
- */
 function catchErrors(fn) {
   return (req, res, next) => fn(req, res, next).catch(next);
 }
@@ -20,8 +15,11 @@ async function postRoute(req, res) {
   const username = req.body.username
   const password = req.body.password
 
-  console.info(`Username = ${username}`)
-  console.info(`Password = ${password}`)
+  if (req.secure) console.info('HTTPS');
+  else console.info('HTTP');
+  
+  console.info(`Username = ${username}`);
+  console.info(`Password = ${password}`);
 
   res.redirect('/');
 }
