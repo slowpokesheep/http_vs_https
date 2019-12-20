@@ -64,6 +64,6 @@ httpConnection.server.listen(httpConnection.port, () => {
 // HTTPS server
 httpsConnection.server.listen(httpsConnection.port, () => {
   if (httpsConnection.host) {
-    console.info(`HTTP server: https://${httpsConnection.host}:${httpsConnection.port}`);
+    console.info(`HTTPS server: https://${httpsConnection.host}:${httpsConnection.port}`);
   }
 });
